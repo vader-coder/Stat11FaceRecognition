@@ -22,6 +22,12 @@ def encodeRange(fnames, offset):
             otherErrorList.append(index+offset)
     return (encoded, errorList, otherErrorList)
 
+
+half = len(imgNamesList)//2
+encoded1, eList1, eOList1 = encodeRange(imgNamesList[:half], 0)
+mf.saveToPickle(encoded1, 'encoded1')
+mf.saveToPickle(eList1, 'errorList1')
+mf.saveToPickle(eOList1, 'otherErrorList1')
 #test for 1st 4
 """
 encoded, eList, eOList = encodeRange(imgNamesList[:4], 0)
