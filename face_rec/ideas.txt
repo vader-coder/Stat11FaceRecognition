@@ -1,0 +1,3 @@
+idea for a loop to compare faces without having to drop known from it.
+for face_name in known_face_names:
+      if face_name != test_name:
